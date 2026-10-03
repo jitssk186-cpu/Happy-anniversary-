@@ -1,0 +1,3246 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Our Purple Story 💜</title>
+
+<style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html,
+body{
+  width:100%;
+  min-height:100%;
+  overflow:hidden;
+}
+
+body{
+  font-family:Arial,sans-serif;
+  color:white;
+  background:#05000d;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+#intro{
+  position:fixed;
+  inset:0;
+  z-index:1000;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  background:
+    radial-gradient(
+      circle at center,
+      #35105c 0%,
+      #160525 45%,
+      #05000d 100%
+    );
+
+  transition:opacity 1s ease;
+}
+
+#intro.hide{
+  opacity:0;
+  pointer-events:none;
+}
+
+.intro-content{
+  text-align:center;
+  transition:opacity .8s ease;
+}
+
+.intro-title{
+  font-size:clamp(22px,5vw,36px);
+  margin-bottom:25px;
+
+  text-shadow:
+    0 0 10px #d98cff,
+    0 0 30px #9d45ff;
+}
+
+.intro-heart{
+  font-size:75px;
+  margin-bottom:25px;
+
+  animation:heartBeat 1.2s infinite;
+
+  filter:
+    drop-shadow(0 0 15px #ff69e8)
+    drop-shadow(0 0 35px #9b45ff);
+}
+
+@keyframes heartBeat{
+
+  0%,100%{
+    transform:scale(1);
+  }
+
+  50%{
+    transform:scale(1.16);
+  }
+
+}
+
+#clickHere{
+  display:inline-block;
+
+  padding:13px 30px;
+
+  border:1px solid rgba(255,255,255,.5);
+  border-radius:50px;
+
+  background:rgba(255,255,255,.08);
+
+  cursor:pointer;
+
+  font-size:17px;
+
+  box-shadow:
+    0 0 15px rgba(196,100,255,.5);
+
+  transition:.3s;
+}
+
+#clickHere:hover{
+  transform:scale(1.08);
+
+  background:
+    rgba(184,82,255,.2);
+
+  box-shadow:
+    0 0 30px #c86cff;
+}
+
+
+/* =========================================================
+   FIREWORKS
+========================================================= */
+
+#fireworks{
+  position:fixed;
+  inset:0;
+
+  pointer-events:none;
+
+  z-index:1100;
+}
+
+.firework{
+  position:absolute;
+
+  width:4px;
+  height:4px;
+
+  border-radius:50%;
+
+  background:white;
+
+  box-shadow:
+    0 0 10px white,
+    0 0 20px #d58aff;
+}
+
+.firework-particle{
+  position:absolute;
+
+  width:3px;
+  height:3px;
+
+  border-radius:50%;
+
+  background:white;
+
+  pointer-events:none;
+}
+
+
+/* =========================================================
+   FIRST HAPPY ANNIVERSARY
+========================================================= */
+
+#anniversaryText{
+  position:fixed;
+
+  left:50%;
+  top:50%;
+
+  transform:
+    translate(-50%,-50%)
+    scale(.5);
+
+  opacity:0;
+
+  z-index:1200;
+
+  text-align:center;
+
+  font-size:clamp(30px,8vw,65px);
+
+  font-weight:bold;
+
+  white-space:nowrap;
+
+  text-shadow:
+    0 0 10px white,
+    0 0 25px #ff8cf4,
+    0 0 50px #a64cff;
+
+  transition:
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+#anniversaryText.show{
+  opacity:1;
+
+  transform:
+    translate(-50%,-50%)
+    scale(1);
+}
+
+#anniversaryText.hide{
+  opacity:0;
+
+  transform:
+    translate(-50%,-50%)
+    scale(.7);
+
+  pointer-events:none;
+}
+
+
+/* =========================================================
+   GIFT SCENE
+========================================================= */
+
+#giftScene{
+  position:fixed;
+  inset:0;
+
+  z-index:1300;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  opacity:0;
+  pointer-events:none;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(92,25,145,.35),
+      rgba(5,0,13,.9)
+    );
+
+  transition:opacity 1s ease;
+}
+
+#giftScene.show{
+  opacity:1;
+}
+
+#giftScene.hide{
+  opacity:0;
+}
+
+
+/* =========================================================
+   GIFT
+========================================================= */
+
+.gift{
+  position:relative;
+
+  width:170px;
+  height:140px;
+
+  margin-top:160px;
+}
+
+.gift-box{
+  position:absolute;
+
+  bottom:0;
+  left:10px;
+
+  width:150px;
+  height:95px;
+
+  border-radius:5px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #a83fff,
+      #6820a8
+    );
+
+  box-shadow:
+    0 0 20px #a74cff,
+    0 0 60px rgba(192,84,255,.6);
+
+  z-index:2;
+}
+
+.gift-box::before{
+  content:"";
+
+  position:absolute;
+
+  left:50%;
+  top:0;
+
+  width:20px;
+  height:100%;
+
+  transform:translateX(-50%);
+
+  background:
+    linear-gradient(
+      90deg,
+      #ffd7ff,
+      #ff9cf8,
+      #ffd7ff
+    );
+
+  opacity:.75;
+}
+
+
+/* =========================================================
+   GIFT LID
+========================================================= */
+
+.gift-lid{
+  position:absolute;
+
+  left:2px;
+  top:15px;
+
+  width:166px;
+  height:32px;
+
+  border-radius:5px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #c65aff,
+      #7827bb
+    );
+
+  transform-origin:center bottom;
+
+  transition:
+    transform 1s ease;
+
+  z-index:8;
+
+  box-shadow:
+    0 0 15px rgba(190,80,255,.7);
+}
+
+#giftScene.open .gift-lid{
+  transform:
+    translateY(-55px)
+    rotateX(68deg)
+    rotateZ(-5deg);
+}
+
+.gift-lid::before{
+  content:"";
+
+  position:absolute;
+
+  left:50%;
+  top:0;
+
+  width:20px;
+  height:100%;
+
+  transform:translateX(-50%);
+
+  background:
+    linear-gradient(
+      90deg,
+      #ffe0ff,
+      #ff9cf8,
+      #ffe0ff
+    );
+}
+
+
+/* =========================================================
+   REALISTIC-STYLE BOUQUET
+========================================================= */
+
+.bouquet{
+  position:absolute;
+
+  left:50%;
+  bottom:42px;
+
+  width:245px;
+  height:250px;
+
+  transform:
+    translateX(-50%)
+    translateY(100px)
+    scale(.3);
+
+  opacity:0;
+
+  transition:
+    transform 1.5s cubic-bezier(.2,.8,.2,1),
+    opacity 1s ease;
+
+  z-index:4;
+}
+
+#giftScene.open .bouquet{
+  transform:
+    translateX(-50%)
+    translateY(-125px)
+    scale(1);
+
+  opacity:1;
+}
+
+
+/* =========================================================
+   WRAPPING PAPER
+========================================================= */
+
+.wrap-back{
+  position:absolute;
+
+  left:35px;
+  bottom:0;
+
+  width:175px;
+  height:145px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f2d7ff,
+      #c47cff 45%,
+      #8140c5 100%
+    );
+
+  clip-path:
+    polygon(
+      10% 0,
+      90% 0,
+      100% 100%,
+      0 100%
+    );
+
+  filter:
+    drop-shadow(
+      0 8px 15px
+      rgba(0,0,0,.45)
+    );
+
+  z-index:1;
+}
+
+.wrap-left{
+  position:absolute;
+
+  left:35px;
+  bottom:0;
+
+  width:88px;
+  height:150px;
+
+  background:
+    linear-gradient(
+      115deg,
+      #ead0ff,
+      #b85fff,
+      #7635ae
+    );
+
+  clip-path:
+    polygon(
+      0 0,
+      100% 12%,
+      75% 100%,
+      0 100%
+    );
+
+  opacity:.92;
+
+  z-index:3;
+}
+
+.wrap-right{
+  position:absolute;
+
+  right:35px;
+  bottom:0;
+
+  width:88px;
+  height:150px;
+
+  background:
+    linear-gradient(
+      245deg,
+      #efd8ff,
+      #b85fff,
+      #7132a9
+    );
+
+  clip-path:
+    polygon(
+      0 12%,
+      100% 0,
+      100% 100%,
+      25% 100%
+    );
+
+  opacity:.92;
+
+  z-index:3;
+}
+
+.wrap-front{
+  position:absolute;
+
+  left:50%;
+  bottom:-5px;
+
+  width:150px;
+  height:105px;
+
+  transform:translateX(-50%);
+
+  background:
+    linear-gradient(
+      165deg,
+      #f3dcff,
+      #c26cff 55%,
+      #7136a9
+    );
+
+  clip-path:
+    polygon(
+      4% 0,
+      96% 0,
+      78% 100%,
+      22% 100%
+    );
+
+  box-shadow:
+    inset 0 0 20px
+    rgba(255,255,255,.18);
+
+  z-index:5;
+}
+
+
+/* PAPER FOLDS */
+
+.wrap-front::before,
+.wrap-front::after{
+  content:"";
+
+  position:absolute;
+
+  top:0;
+
+  width:2px;
+  height:100%;
+
+  background:
+    rgba(255,255,255,.28);
+
+  transform:rotate(8deg);
+}
+
+.wrap-front::before{
+  left:35%;
+}
+
+.wrap-front::after{
+  right:35%;
+}
+
+
+/* =========================================================
+   RIBBON
+========================================================= */
+
+.ribbon{
+  position:absolute;
+
+  left:50%;
+  bottom:35px;
+
+  width:82px;
+  height:28px;
+
+  transform:translateX(-50%);
+
+  z-index:7;
+}
+
+.ribbon::before,
+.ribbon::after{
+  content:"";
+
+  position:absolute;
+
+  top:4px;
+
+  width:45px;
+  height:23px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffb4f8,
+      #d53cff
+    );
+
+  box-shadow:
+    0 0 12px
+    rgba(244,91,255,.6);
+}
+
+.ribbon::before{
+  right:42px;
+
+  clip-path:
+    polygon(
+      100% 0,
+      0 25%,
+      20% 100%,
+      100% 65%
+    );
+
+  transform:rotate(-8deg);
+}
+
+.ribbon::after{
+  left:42px;
+
+  clip-path:
+    polygon(
+      0 0,
+      100% 25%,
+      80% 100%,
+      0 65%
+    );
+
+  transform:rotate(8deg);
+}
+
+.ribbon-knot{
+  position:absolute;
+
+  left:50%;
+  top:3px;
+
+  width:25px;
+  height:25px;
+
+  transform:translateX(-50%);
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(
+      circle at 35% 30%,
+      #ffd9ff,
+      #e13cff 60%,
+      #8f20b9
+    );
+
+  box-shadow:
+    0 0 15px #ed5cff;
+
+  z-index:2;
+}
+
+
+/* =========================================================
+   TULIP
+========================================================= */
+
+.tulip{
+  position:absolute;
+
+  width:48px;
+  height:115px;
+
+  transform-origin:center bottom;
+
+  z-index:2;
+}
+
+.tulip .stem{
+  position:absolute;
+
+  left:50%;
+  top:45px;
+
+  width:5px;
+  height:78px;
+
+  transform:translateX(-50%);
+
+  border-radius:5px;
+
+  background:
+    linear-gradient(
+      to right,
+      #1e763d,
+      #68c95d,
+      #238c48
+    );
+
+  box-shadow:
+    1px 0 3px rgba(0,0,0,.25);
+}
+
+
+/* =========================================================
+   LEAVES
+========================================================= */
+
+.tulip .leaf{
+  position:absolute;
+
+  width:34px;
+  height:15px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #91dc72,
+      #258d48
+    );
+
+  border-radius:
+    100% 0 100% 0;
+
+  z-index:1;
+}
+
+.tulip .leaf.left{
+  left:-3px;
+  top:78px;
+
+  transform:
+    rotate(27deg)
+    skewX(-8deg);
+}
+
+.tulip .leaf.right{
+  right:-3px;
+  top:88px;
+
+  transform:
+    rotate(-27deg)
+    skewX(8deg);
+}
+
+
+/* =========================================================
+   TULIP FLOWER
+========================================================= */
+
+.tulip .flower{
+  position:absolute;
+
+  left:50%;
+  top:5px;
+
+  width:45px;
+  height:48px;
+
+  transform:
+    translateX(-50%);
+
+  z-index:4;
+
+  filter:
+    drop-shadow(
+      0 5px 7px
+      rgba(0,0,0,.25)
+    );
+}
+
+
+/* PETALS */
+
+.tulip .flower::before{
+  content:"";
+
+  position:absolute;
+
+  left:1px;
+  bottom:0;
+
+  width:43px;
+  height:42px;
+
+  background:
+    linear-gradient(
+      105deg,
+      #f6a8ff 0%,
+      #d957ef 38%,
+      #9c35ce 72%,
+      #66218e 100%
+    );
+
+  clip-path:
+    polygon(
+      0 28%,
+      15% 7%,
+      34% 30%,
+      50% 0,
+      67% 30%,
+      86% 7%,
+      100% 28%,
+      94% 70%,
+      75% 94%,
+      50% 100%,
+      25% 94%,
+      6% 70%
+    );
+
+  border-radius:
+    45% 45%
+    50% 50%;
+}
+
+
+/* INNER PETAL */
+
+.tulip .flower::after{
+  content:"";
+
+  position:absolute;
+
+  left:8px;
+  top:9px;
+
+  width:29px;
+  height:32px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffc6ff,
+      #e05cf2 55%,
+      #9e36c8
+    );
+
+  clip-path:
+    polygon(
+      0 20%,
+      25% 0,
+      50% 24%,
+      76% 0,
+      100% 20%,
+      88% 75%,
+      50% 100%,
+      12% 75%
+    );
+
+  opacity:.9;
+}
+
+
+/* =========================================================
+   FLOWER HIGHLIGHT
+========================================================= */
+
+.t1 .flower,
+.t5 .flower{
+  background:
+    radial-gradient(
+      circle at 35% 20%,
+      rgba(255,255,255,.5),
+      transparent 25%
+    );
+}
+
+.t2 .flower::before,
+.t8 .flower::before{
+  background:
+    linear-gradient(
+      105deg,
+      #ffb7fa,
+      #dc65ee,
+      #8b2db7
+    );
+}
+
+.t3 .flower::before,
+.t7 .flower::before{
+  background:
+    linear-gradient(
+      105deg,
+      #eeb0ff,
+      #bd50e7,
+      #7424a0
+    );
+}
+
+.t4 .flower::before,
+.t9 .flower::before{
+  background:
+    linear-gradient(
+      105deg,
+      #ffd0ff,
+      #d95cf0,
+      #7c2a9e
+    );
+}
+
+
+/* =========================================================
+   TULIP POSITIONS
+========================================================= */
+
+.t1{
+  left:95px;
+  top:0;
+  transform:rotate(-5deg) scale(1.05);
+}
+
+.t2{
+  left:54px;
+  top:23px;
+  transform:rotate(-15deg) scale(.95);
+}
+
+.t3{
+  left:137px;
+  top:25px;
+  transform:rotate(14deg) scale(.98);
+}
+
+.t4{
+  left:20px;
+  top:58px;
+  transform:rotate(-24deg) scale(.9);
+}
+
+.t5{
+  left:93px;
+  top:50px;
+  transform:rotate(-3deg) scale(1.05);
+}
+
+.t6{
+  left:158px;
+  top:58px;
+  transform:rotate(23deg) scale(.91);
+}
+
+.t7{
+  left:55px;
+  top:82px;
+  transform:rotate(-10deg) scale(.88);
+}
+
+.t8{
+  left:121px;
+  top:84px;
+  transform:rotate(10deg) scale(.92);
+}
+
+.t9{
+  left:28px;
+  top:100px;
+  transform:rotate(-18deg) scale(.78);
+}
+
+.t10{
+  left:160px;
+  top:103px;
+  transform:rotate(19deg) scale(.8);
+}
+
+
+/* =========================================================
+   UNIVERSE
+========================================================= */
+
+#universe{
+  position:fixed;
+  inset:0;
+
+  overflow:hidden;
+
+  background:
+    radial-gradient(
+      circle at center,
+      #251044 0%,
+      #10051f 42%,
+      #030007 100%
+    );
+
+  opacity:0;
+
+  transition:opacity 1.5s ease;
+
+  z-index:1;
+}
+
+#universe.show{
+  opacity:1;
+}
+
+
+/* =========================================================
+   STARS
+========================================================= */
+
+#stars{
+  position:absolute;
+  inset:0;
+
+  background-image:
+    radial-gradient(
+      circle,
+      rgba(255,255,255,.9) 1px,
+      transparent 1.5px
+    );
+
+  background-size:70px 70px;
+
+  opacity:.55;
+}
+
+.shooting-star{
+  position:absolute;
+
+  width:100px;
+  height:2px;
+
+  background:
+    linear-gradient(
+      to right,
+      transparent,
+      white
+    );
+
+  transform:rotate(-35deg);
+
+  animation:
+    shooting 4s linear infinite;
+
+  opacity:0;
+}
+
+@keyframes shooting{
+
+  0%{
+    transform:
+      translate(0,0)
+      rotate(-35deg);
+
+    opacity:0;
+  }
+
+  10%{
+    opacity:1;
+  }
+
+  100%{
+    transform:
+      translate(500px,350px)
+      rotate(-35deg);
+
+    opacity:0;
+  }
+
+}
+
+
+/* =========================================================
+   UNIVERSE TITLE
+========================================================= */
+
+.universe-title{
+  position:absolute;
+
+  top:18px;
+  left:50%;
+
+  transform:translateX(-50%);
+
+  text-align:center;
+
+  z-index:100;
+
+  width:100%;
+
+  pointer-events:none;
+}
+
+.universe-title h1{
+  font-size:
+    clamp(22px,5vw,40px);
+
+  text-shadow:
+    0 0 12px #e58cff,
+    0 0 35px #8b3cff;
+}
+
+.universe-title p{
+  margin-top:5px;
+
+  font-size:
+    clamp(12px,3vw,18px);
+
+  opacity:.8;
+}
+
+
+/* =========================================================
+   CENTER PHOTO
+========================================================= */
+
+.center-photo{
+  position:absolute;
+
+  left:50%;
+  top:50%;
+
+  width:125px;
+  height:125px;
+
+  transform:
+    translate(-50%,-50%);
+
+  border-radius:50%;
+
+  object-fit:cover;
+
+  border:
+    4px solid
+    rgba(255,255,255,.85);
+
+  box-shadow:
+    0 0 20px #d56cff,
+    0 0 50px #8c3cff,
+    0 0 100px rgba(176,65,255,.65);
+
+  z-index:200;
+
+  pointer-events:none;
+}
+
+
+/* =========================================================
+   WORLD
+========================================================= */
+
+.world{
+  position:absolute;
+
+  left:50%;
+  top:50%;
+
+  width:100%;
+  height:100%;
+
+  transform:
+    translate(-50%,-50%)
+    scale3d(1,1,1)
+    rotateX(0deg)
+    rotateY(0deg)
+    rotateZ(0deg);
+
+  transform-style:preserve-3d;
+
+  perspective:1200px;
+
+  transform-origin:center center;
+
+  will-change:transform;
+}
+
+
+/* =========================================================
+   SYSTEM
+========================================================= */
+
+.system{
+  position:absolute;
+
+  left:50%;
+  top:50%;
+
+  width:100%;
+  height:100%;
+
+  transform:
+    translate(-50%,-50%);
+
+  transform-style:preserve-3d;
+
+  pointer-events:none;
+}
+
+
+/* =========================================================
+   RINGS
+========================================================= */
+
+.ring{
+  position:absolute;
+
+  left:50%;
+  top:50%;
+
+  transform:
+    translate(-50%,-50%)
+    rotateX(65deg);
+
+  border:
+    1px solid
+    rgba(202,121,255,.18);
+
+  border-radius:50%;
+
+  box-shadow:
+    0 0 20px
+    rgba(183,83,255,.12);
+
+  pointer-events:none;
+}
+
+.r1{
+  width:38%;
+  height:27%;
+}
+
+.r2{
+  width:48%;
+  height:34%;
+}
+
+.r3{
+  width:58%;
+  height:41%;
+}
+
+.r4{
+  width:68%;
+  height:48%;
+}
+
+
+/* =========================================================
+   CONNECTIONS
+========================================================= */
+
+.connections{
+  position:absolute;
+
+  inset:0;
+
+  width:100%;
+  height:100%;
+
+  pointer-events:none;
+
+  overflow:visible;
+}
+
+.connections line{
+  stroke:
+    rgba(213,137,255,.22);
+
+  stroke-width:1;
+
+  filter:
+    drop-shadow(
+      0 0 5px
+      rgba(207,104,255,.7)
+    );
+}
+
+
+/* =========================================================
+   ORBIT ITEM
+========================================================= */
+
+.orbit-item{
+  position:absolute;
+
+  left:50%;
+  top:50%;
+
+  width:135px;
+
+  transform:
+    translate(-50%,-50%);
+
+  text-align:center;
+
+  transform-style:preserve-3d;
+
+  transition:
+    filter .2s ease;
+
+  pointer-events:auto;
+
+  cursor:pointer;
+}
+
+.orbit-item:hover{
+  filter:brightness(1.25);
+}
+
+
+/* =========================================================
+   PHOTO FRAME
+========================================================= */
+
+.photo-frame{
+  width:70px;
+  height:70px;
+
+  margin:auto;
+
+  padding:3px;
+
+  border-radius:50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f7c7ff,
+      #a34dff,
+      #6c24bd
+    );
+
+  box-shadow:
+    0 0 15px rgba(197,91,255,.8),
+    0 0 30px rgba(151,57,255,.4);
+}
+
+.orbit-item img{
+  width:100%;
+  height:100%;
+
+  border-radius:50%;
+
+  object-fit:cover;
+
+  display:block;
+
+  border:
+    2px solid
+    rgba(255,255,255,.85);
+}
+
+
+/* =========================================================
+   MEMORY
+========================================================= */
+
+.memory{
+  width:135px;
+
+  margin-top:7px;
+
+  padding:7px 9px;
+
+  border-radius:12px;
+
+  background:
+    rgba(40,10,65,.72);
+
+  border:
+    1px solid
+    rgba(214,137,255,.35);
+
+  box-shadow:
+    0 0 12px
+    rgba(173,73,255,.25);
+
+  backdrop-filter:blur(5px);
+
+  font-size:10px;
+
+  line-height:1.35;
+
+  text-shadow:
+    0 0 5px
+    rgba(255,255,255,.35);
+}
+
+
+/* =========================================================
+   ENERGY
+========================================================= */
+
+.energy{
+  position:absolute;
+
+  width:5px;
+  height:5px;
+
+  margin-left:-2.5px;
+  margin-top:-2.5px;
+
+  border-radius:50%;
+
+  background:white;
+
+  box-shadow:
+    0 0 8px white,
+    0 0 18px #d15cff;
+
+  pointer-events:none;
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+#modal{
+  position:fixed;
+  inset:0;
+
+  z-index:1000;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  background:
+    rgba(5,0,15,.88);
+
+  opacity:0;
+
+  pointer-events:none;
+
+  transition:.3s;
+}
+
+#modal.show{
+  opacity:1;
+
+  pointer-events:auto;
+}
+
+.modal-content{
+  position:relative;
+
+  width:min(90vw,600px);
+  height:min(80vh,600px);
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  overflow:hidden;
+
+  border-radius:20px;
+}
+
+#modalImage{
+  max-width:90%;
+  max-height:90%;
+
+  object-fit:contain;
+
+  border-radius:15px;
+
+  box-shadow:
+    0 0 40px #a950ff;
+
+  touch-action:none;
+
+  user-select:none;
+}
+
+.modal-close{
+  position:absolute;
+
+  right:15px;
+  top:10px;
+
+  width:38px;
+  height:38px;
+
+  border-radius:50%;
+
+  border:
+    1px solid
+    rgba(255,255,255,.5);
+
+  background:
+    rgba(255,255,255,.1);
+
+  color:white;
+
+  font-size:24px;
+
+  cursor:pointer;
+
+  z-index:5;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:600px){
+
+  .center-photo{
+    width:105px;
+    height:105px;
+  }
+
+  .orbit-item{
+    width:118px;
+  }
+
+  .photo-frame{
+    width:60px;
+    height:60px;
+  }
+
+  .memory{
+    width:118px;
+
+    font-size:9px;
+
+    padding:6px 7px;
+  }
+
+  .r1{
+    width:42%;
+    height:27%;
+  }
+
+  .r2{
+    width:54%;
+    height:35%;
+  }
+
+  .r3{
+    width:66%;
+    height:43%;
+  }
+
+  .r4{
+    width:78%;
+    height:51%;
+  }
+
+  .bouquet{
+    transform:
+      translateX(-50%)
+      translateY(100px)
+      scale(.26);
+  }
+
+  #giftScene.open .bouquet{
+    transform:
+      translateX(-50%)
+      translateY(-120px)
+      scale(.86);
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     INTRO
+====================================================== -->
+
+<section id="intro">
+
+  <div class="intro-content">
+
+    <div class="intro-title">
+      Something special for you
+    </div>
+
+    <div class="intro-heart">
+      💗
+    </div>
+
+    <div id="clickHere">
+      Click Here ✨
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     FIREWORKS
+====================================================== -->
+
+<div id="fireworks"></div>
+
+
+<!-- =====================================================
+     FIRST HAPPY ANNIVERSARY
+====================================================== -->
+
+<div id="anniversaryText">
+  Happy Anniversary 💗
+</div>
+
+
+<!-- =====================================================
+     GIFT
+====================================================== -->
+
+<section id="giftScene">
+
+  <div class="gift">
+
+
+    <!-- =================================================
+         BOUQUET
+    ================================================== -->
+
+    <div class="bouquet">
+
+
+      <!-- FLOWERS -->
+
+      <div class="tulip t1">
+        <div class="flower"></div>
+        <div class="stem"></div>
+        <div class="leaf left"></div>
+        <div class="leaf right"></div>
+      </div>
+
+      <div class="tulip t2">
+        <div class="flower"></div>
+        <div class="stem"></div>
+        <div class="leaf left"></div>
+        <div class="leaf right"></div>
+      </div>
+
+      <div class="tulip t3">
+        <div class="flower"></div>
+        <div class="stem"></div>
+        <div class="leaf left"></div>
+        <div class="leaf right"></div>
+      </div>
+
+      <div class="tulip t4">
+        <div class="flower"></div>
+        <div class="stem"></div>
+        <div class="leaf left"></div>
+        <div class="leaf right"></div>
+      </div>
+
+      <div class="tulip t5">
+        <div class="flower"></div>
+        <div class="stem"></div>
+        <div class="leaf left"></div>
+        <div class="leaf right"></div>
+      </div>
+
+      <div class="tulip t6">
+        <div class="flower"></div>
+        <div class="stem"></div>
+        <div class="leaf left"></div>
+        <div class="leaf right"></div>
+      </div>
+
+      <div class="tulip t7">
+        <div class="flower"></div>
+        <div class="stem"></div>
+        <div class="leaf left"></div>
+        <div class="leaf right"></div>
+      </div>
+
+      <div class="tulip t8">
+        <div class="flower"></div>
+        <div class="stem"></div>
+        <div class="leaf left"></div>
+        <div class="leaf right"></div>
+      </div>
+
+      <div class="tulip t9">
+        <div class="flower"></div>
+        <div class="stem"></div>
+        <div class="leaf left"></div>
+        <div class="leaf right"></div>
+      </div>
+
+      <div class="tulip t10">
+        <div class="flower"></div>
+        <div class="stem"></div>
+        <div class="leaf left"></div>
+        <div class="leaf right"></div>
+      </div>
+
+
+      <!-- WRAPPING PAPER -->
+
+      <div class="wrap-back"></div>
+      <div class="wrap-left"></div>
+      <div class="wrap-right"></div>
+      <div class="wrap-front"></div>
+
+
+      <!-- RIBBON -->
+
+      <div class="ribbon">
+        <div class="ribbon-knot"></div>
+      </div>
+
+    </div>
+
+
+    <!-- GIFT BOX -->
+
+    <div class="gift-box"></div>
+
+
+    <!-- GIFT LID -->
+
+    <div class="gift-lid"></div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     UNIVERSE
+====================================================== -->
+
+<section id="universe">
+
+  <div id="stars"></div>
+
+
+  <div
+    class="shooting-star"
+    style="left:5%;top:15%;animation-delay:1s;">
+  </div>
+
+  <div
+    class="shooting-star"
+    style="left:50%;top:8%;animation-delay:3s;">
+  </div>
+
+  <div
+    class="shooting-star"
+    style="left:25%;top:40%;animation-delay:5s;">
+  </div>
+
+
+  <!-- UNIVERSE TITLE -->
+
+  <div class="universe-title">
+
+    <h1>
+      Happy Anniversary 💗
+    </h1>
+
+    <p>
+      Our little universe ✨
+    </p>
+
+  </div>
+
+
+  <!-- ===================================================
+       WORLD
+  ==================================================== -->
+
+  <div class="world">
+
+    <div class="system">
+
+
+      <!-- RINGS -->
+
+      <div class="ring r1"></div>
+      <div class="ring r2"></div>
+      <div class="ring r3"></div>
+      <div class="ring r4"></div>
+
+
+      <!-- CONNECTIONS -->
+
+      <svg class="connections">
+
+        <line class="connection" data-photo="2"></line>
+        <line class="connection" data-photo="3"></line>
+        <line class="connection" data-photo="4"></line>
+        <line class="connection" data-photo="5"></line>
+        <line class="connection" data-photo="6"></line>
+        <line class="connection" data-photo="7"></line>
+        <line class="connection" data-photo="8"></line>
+        <line class="connection" data-photo="9"></line>
+        <line class="connection" data-photo="10"></line>
+        <line class="connection" data-photo="11"></line>
+
+      </svg>
+
+
+      <!-- PHOTO 2 -->
+
+      <div class="orbit-item" data-photo="2">
+
+        <div class="photo-frame">
+          <img src="images/photo2.JPG" alt="Memory 2">
+        </div>
+
+        <div class="memory">
+          ขอบคุณที่เข้ามาเป็นความทรงจำที่สวยงามในชีวิตของฉัน 💗
+        </div>
+
+        <div class="energy"></div>
+
+      </div>
+
+
+      <!-- PHOTO 3 -->
+
+      <div class="orbit-item" data-photo="3">
+
+        <div class="photo-frame">
+          <img src="images/photo3.JPG" alt="Memory 3">
+        </div>
+
+        <div class="memory">
+          บางคนไม่ได้เข้ามาเพื่อผ่านไป แต่เข้ามาเพื่อกลายเป็นส่วนหนึ่งของความทรงจำตลอดไป ✨
+        </div>
+
+        <div class="energy"></div>
+
+      </div>
+
+
+      <!-- PHOTO 4 -->
+
+      <div class="orbit-item" data-photo="4">
+
+        <div class="photo-frame">
+          <img src="images/photo4.JPG" alt="Memory 4">
+        </div>
+
+        <div class="memory">
+          เวลาที่ผ่านไปอาจเปลี่ยนหลายสิ่ง แต่ความหมายของช่วงเวลาดี ๆ จะยังคงอยู่เสมอ 🌷
+        </div>
+
+        <div class="energy"></div>
+
+      </div>
+
+
+      <!-- PHOTO 5 -->
+
+      <div class="orbit-item" data-photo="5">
+
+        <div class="photo-frame">
+          <img src="images/photo5.JPG" alt="Memory 5">
+        </div>
+
+        <div class="memory">
+          ไม่ว่าจะย้อนกลับไปกี่ครั้ง ฉันก็ยังยิ้มให้กับความทรงจำเหล่านี้ได้เสมอ 💕
+        </div>
+
+        <div class="energy"></div>
+
+      </div>
+
+
+      <!-- PHOTO 6 -->
+
+      <div class="orbit-item" data-photo="6">
+
+        <div class="photo-frame">
+          <img src="images/photo6.JPG" alt="Memory 6">
+        </div>
+
+        <div class="memory">
+          ขอบคุณสำหรับทุกช่วงเวลาที่ทำให้วันธรรมดา กลายเป็นวันที่มีความหมาย 🌙
+        </div>
+
+        <div class="energy"></div>
+
+      </div>
+
+
+      <!-- PHOTO 7 -->
+
+      <div class="orbit-item" data-photo="7">
+
+        <div class="photo-frame">
+          <img src="images/photo7.JPG" alt="Memory 7">
+        </div>
+
+        <div class="memory">
+          ความทรงจำบางอย่างไม่จำเป็นต้องมีคำอธิบาย แค่คิดถึงก็รู้สึกอบอุ่นในใจแล้ว 🤍
+        </div>
+
+        <div class="energy"></div>
+
+      </div>
+
+
+      <!-- PHOTO 8 -->
+
+      <div class="orbit-item" data-photo="8">
+
+        <div class="photo-frame">
+          <img src="images/photo8.JPG" alt="Memory 8">
+        </div>
+
+        <div class="memory">
+          สิ่งที่มีค่าที่สุด ไม่ใช่เวลาที่เราอยู่ด้วยกันนานแค่ไหน แต่คือความหมายที่เราให้แก่กัน 🌌
+        </div>
+
+        <div class="energy"></div>
+
+      </div>
+
+
+      <!-- PHOTO 9 -->
+
+      <div class="orbit-item" data-photo="9">
+
+        <div class="photo-frame">
+          <img src="images/photo9.JPG" alt="Memory 9">
+        </div>
+
+        <div class="memory">
+          ถ้าวันหนึ่งเรากลับมามองรูปเหล่านี้อีกครั้ง ขอให้เรายังจำรอยยิ้มของวันนี้ได้เสมอ 💫
+        </div>
+
+        <div class="energy"></div>
+
+      </div>
+
+
+      <!-- PHOTO 10 -->
+
+      <div class="orbit-item" data-photo="10">
+
+        <div class="photo-frame">
+          <img src="images/photo10.JPG" alt="Memory 10">
+        </div>
+
+        <div class="memory">
+          ทุกภาพมีเรื่องราว และทุกเรื่องราวมีช่วงเวลาที่ไม่สามารถย้อนกลับไปได้อีก 📖
+        </div>
+
+        <div class="energy"></div>
+
+      </div>
+
+
+      <!-- PHOTO 11 -->
+
+      <div class="orbit-item" data-photo="11">
+
+        <div class="photo-frame">
+          <img src="images/photo11.JPG" alt="Memory 11">
+        </div>
+
+        <div class="memory">
+          ขอให้ความทรงจำดี ๆ เหล่านี้ เป็นหนึ่งในสิ่งที่ทำให้เรายิ้มได้ในวันที่คิดถึงมัน 💗
+        </div>
+
+        <div class="energy"></div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- CENTER PHOTO -->
+
+  <img
+    class="center-photo"
+    src="images/photo1.JPG"
+    alt="Center Photo">
+
+</section>
+
+
+<!-- =====================================================
+     MODAL
+====================================================== -->
+
+<div id="modal">
+
+  <div class="modal-content">
+
+    <button class="modal-close">
+      ×
+    </button>
+
+    <img
+      id="modalImage"
+      src=""
+      alt="Memory">
+
+  </div>
+
+</div>
+
+
+<!-- =====================================================
+     MUSIC
+====================================================== -->
+
+<audio
+  id="music"
+  src="music/our-song.mp3"
+  preload="auto">
+</audio>
+
+
+<script>
+
+/* =========================================================
+   ELEMENTS
+========================================================= */
+
+const intro =
+  document.getElementById("intro");
+
+const clickHere =
+  document.getElementById("clickHere");
+
+const fireworks =
+  document.getElementById("fireworks");
+
+const anniversaryText =
+  document.getElementById("anniversaryText");
+
+const giftScene =
+  document.getElementById("giftScene");
+
+const universe =
+  document.getElementById("universe");
+
+const music =
+  document.getElementById("music");
+
+let introStarted=false;
+
+
+/* =========================================================
+   FIREWORK
+========================================================= */
+
+function createFirework(){
+
+  const x =
+    Math.random() *
+    window.innerWidth;
+
+  const y =
+    Math.random() *
+    window.innerHeight *
+    .55;
+
+  const firework =
+    document.createElement("div");
+
+  firework.className="firework";
+
+  firework.style.left=`${x}px`;
+  firework.style.top=`${y}px`;
+
+  fireworks.appendChild(firework);
+
+
+  const particleCount=
+    45+
+    Math.floor(
+      Math.random()*20
+    );
+
+
+  for(
+    let i=0;
+    i<particleCount;
+    i++
+  ){
+
+    const particle=
+      document.createElement("div");
+
+    particle.className=
+      "firework-particle";
+
+
+    const angle=
+      Math.random()*
+      Math.PI*2;
+
+
+    const distance=
+      45+
+      Math.random()*100;
+
+
+    const px=
+      Math.cos(angle)*
+      distance;
+
+
+    const py=
+      Math.sin(angle)*
+      distance;
+
+
+    particle.style.left=`${x}px`;
+    particle.style.top=`${y}px`;
+
+
+    particle.style.boxShadow=
+      `
+      0 0 6px white,
+      0 0 12px ${
+        Math.random()>.5
+        ? "#c45cff"
+        : "#ff9be9"
+      }
+      `;
+
+
+    particle.animate(
+
+      [
+        {
+          transform:
+            "translate(0,0) scale(1)",
+
+          opacity:1
+        },
+
+        {
+          transform:
+            `translate(${px}px,${py}px) scale(.2)`,
+
+          opacity:0
+        }
+
+      ],
+
+      {
+        duration:
+          900+
+          Math.random()*700,
+
+        easing:
+          "cubic-bezier(.15,.8,.3,1)",
+
+        fill:"forwards"
+      }
+
+    );
+
+
+    fireworks.appendChild(particle);
+
+  }
+
+
+  setTimeout(
+    ()=>{
+      firework.remove();
+    },
+    1800
+  );
+
+}
+
+
+/* =========================================================
+   INTRO SEQUENCE
+========================================================= */
+
+clickHere.addEventListener(
+  "click",
+  ()=>{
+
+    if(introStarted)
+      return;
+
+    introStarted=true;
+
+
+    music
+      .play()
+      .catch(()=>{});
+
+
+    document
+      .querySelector(".intro-content")
+      .style.opacity="0";
+
+
+    const fireworkTimes=[
+      0,
+      280,
+      550,
+      900,
+      1200,
+      1500,
+      1850,
+      2150,
+      2450
+    ];
+
+
+    fireworkTimes.forEach(
+      time=>{
+
+        setTimeout(
+          createFirework,
+          time
+        );
+
+      }
+    );
+
+
+    setTimeout(
+      ()=>{
+
+        anniversaryText
+          .classList
+          .add("show");
+
+      },
+      250
+    );
+
+
+    setTimeout(
+      ()=>{
+
+        giftScene
+          .classList
+          .add("show");
+
+      },
+      3100
+    );
+
+
+    setTimeout(
+      ()=>{
+
+        giftScene
+          .classList
+          .add("open");
+
+      },
+      3900
+    );
+
+
+    setTimeout(
+      ()=>{
+
+        giftScene
+          .classList
+          .add("hide");
+
+      },
+      6800
+    );
+
+
+    setTimeout(
+      ()=>{
+
+        anniversaryText
+          .classList
+          .remove("show");
+
+        anniversaryText
+          .classList
+          .add("hide");
+
+
+        intro
+          .classList
+          .add("hide");
+
+
+        universe
+          .classList
+          .add("show");
+
+      },
+      7600
+    );
+
+  }
+);
+
+
+/* =========================================================
+   ORBIT SETTINGS
+========================================================= */
+
+const orbitSettings=[
+
+  {
+    photo:2,
+    angle:0,
+    radius:.38,
+    ellipse:.78,
+    speed:.00038
+  },
+
+  {
+    photo:3,
+    angle:36,
+    radius:.38,
+    ellipse:.78,
+    speed:.00032
+  },
+
+  {
+    photo:4,
+    angle:72,
+    radius:.38,
+    ellipse:.78,
+    speed:.00040
+  },
+
+  {
+    photo:5,
+    angle:108,
+    radius:.38,
+    ellipse:.78,
+    speed:-.00030
+  },
+
+  {
+    photo:6,
+    angle:144,
+    radius:.38,
+    ellipse:.78,
+    speed:-.00035
+  },
+
+  {
+    photo:7,
+    angle:180,
+    radius:.38,
+    ellipse:.78,
+    speed:-.00028
+  },
+
+  {
+    photo:8,
+    angle:216,
+    radius:.38,
+    ellipse:.78,
+    speed:.00022
+  },
+
+  {
+    photo:9,
+    angle:252,
+    radius:.38,
+    ellipse:.78,
+    speed:.00018
+  },
+
+  {
+    photo:10,
+    angle:288,
+    radius:.38,
+    ellipse:.78,
+    speed:.00020
+  },
+
+  {
+    photo:11,
+    angle:324,
+    radius:.38,
+    ellipse:.78,
+    speed:.00016
+  }
+
+];
+
+
+/* =========================================================
+   ORBIT ELEMENTS
+========================================================= */
+
+const orbitItems=[];
+
+
+orbitSettings.forEach(
+  item=>{
+
+    const element=
+      document.querySelector(
+        `.orbit-item[data-photo="${item.photo}"]`
+      );
+
+
+    if(!element)
+      return;
+
+
+    orbitItems.push({
+
+      ...item,
+
+      angle:
+        item.angle*
+        Math.PI/
+        180,
+
+      element
+
+    });
+
+  }
+);
+
+
+/* =========================================================
+   WORLD 3D
+========================================================= */
+
+let worldScale=1;
+
+let worldRotateX=0;
+let worldRotateY=0;
+let worldRotateZ=0;
+
+
+const world=
+  document.querySelector(".world");
+
+
+function updateWorld(){
+
+  world.style.transform=
+    `
+    translate(-50%,-50%)
+    scale3d(
+      ${worldScale},
+      ${worldScale},
+      ${worldScale}
+    )
+    rotateX(${worldRotateX}deg)
+    rotateY(${worldRotateY}deg)
+    rotateZ(${worldRotateZ}deg)
+    `;
+
+}
+
+
+/* =========================================================
+   ORBIT ANIMATION
+========================================================= */
+
+function animateOrbits(){
+
+  const width=
+    window.innerWidth;
+
+  const height=
+    window.innerHeight;
+
+
+  const base=
+    Math.min(
+      width,
+      height
+    );
+
+
+  const centerX=
+    width/2;
+
+  const centerY=
+    height/2;
+
+
+  orbitItems.forEach(
+    item=>{
+
+      item.angle+=
+        item.speed*2.5;
+
+
+      const radius=
+        base*
+        item.radius;
+
+
+      const x=
+        Math.cos(
+          item.angle
+        )*
+        radius;
+
+
+      const y=
+        Math.sin(
+          item.angle
+        )*
+        radius*
+        item.ellipse;
+
+
+      const depth=
+        (
+          Math.sin(
+            item.angle
+          )+1
+        )/2;
+
+
+      const scale=
+        .78+
+        depth*.25;
+
+
+      const opacity=
+        .65+
+        depth*.35;
+
+
+      item.element.style.transform=
+        `
+        translate(-50%,-50%)
+        translate3d(
+          ${x}px,
+          ${y}px,
+          0
+        )
+        scale(${scale})
+        `;
+
+
+      item.element.style.opacity=
+        opacity;
+
+
+      item.element.style.zIndex=
+        Math.floor(
+          10+
+          depth*80
+        );
+
+
+      const line=
+        document.querySelector(
+          `.connection[data-photo="${item.photo}"]`
+        );
+
+
+      if(line){
+
+        line.setAttribute(
+          "x1",
+          centerX
+        );
+
+        line.setAttribute(
+          "y1",
+          centerY
+        );
+
+        line.setAttribute(
+          "x2",
+          centerX+x
+        );
+
+        line.setAttribute(
+          "y2",
+          centerY+y
+        );
+
+      }
+
+    });
+
+
+  requestAnimationFrame(
+    animateOrbits
+  );
+
+}
+
+
+/* =========================================================
+   TOUCH 3D
+========================================================= */
+
+let startDistance=0;
+let startAngle=0;
+
+let startScale=1;
+
+let startRotateX=0;
+let startRotateY=0;
+let startRotateZ=0;
+
+let resetTimer=null;
+
+
+function getDistance(touches){
+
+  const dx=
+    touches[0].clientX-
+    touches[1].clientX;
+
+
+  const dy=
+    touches[0].clientY-
+    touches[1].clientY;
+
+
+  return Math.hypot(
+    dx,
+    dy
+  );
+
+}
+
+
+function getAngle(touches){
+
+  return Math.atan2(
+
+    touches[1].clientY-
+    touches[0].clientY,
+
+    touches[1].clientX-
+    touches[0].clientX
+
+  );
+
+}
+
+
+function scheduleReset(){
+
+  clearTimeout(
+    resetTimer
+  );
+
+
+  resetTimer=
+    setTimeout(
+      ()=>{
+
+        worldScale=1;
+
+        worldRotateX=0;
+        worldRotateY=0;
+        worldRotateZ=0;
+
+
+        world.style.transition=
+          "transform .65s ease";
+
+
+        updateWorld();
+
+
+        setTimeout(
+          ()=>{
+
+            world.style.transition="";
+
+          },
+          700
+        );
+
+      },
+      20
+    );
+
+}
+
+
+world.addEventListener(
+  "touchstart",
+  e=>{
+
+    if(
+      e.touches.length!==2
+    )
+      return;
+
+
+    e.preventDefault();
+
+
+    startDistance=
+      getDistance(
+        e.touches
+      );
+
+
+    startAngle=
+      getAngle(
+        e.touches
+      );
+
+
+    startScale=
+      worldScale;
+
+
+    startRotateX=
+      worldRotateX;
+
+
+    startRotateY=
+      worldRotateY;
+
+
+    startRotateZ=
+      worldRotateZ;
+
+  },
+  {
+    passive:false
+  }
+);
+
+
+world.addEventListener(
+  "touchmove",
+  e=>{
+
+    if(
+      e.touches.length!==2
+    )
+      return;
+
+
+    e.preventDefault();
+
+
+    const distance=
+      getDistance(
+        e.touches
+      );
+
+
+    const angle=
+      getAngle(
+        e.touches
+      );
+
+
+    worldScale=
+      Math.max(
+        .55,
+        Math.min(
+          3,
+          startScale*
+          (
+            distance/
+            startDistance
+          )
+        )
+      );
+
+
+    const midX=
+      (
+        e.touches[0].clientX+
+        e.touches[1].clientX
+      )/2;
+
+
+    const midY=
+      (
+        e.touches[0].clientY+
+        e.touches[1].clientY
+      )/2;
+
+
+    const centerScreenX=
+      window.innerWidth/2;
+
+
+    const centerScreenY=
+      window.innerHeight/2;
+
+
+    worldRotateY=
+      startRotateY+
+      (
+        midX-
+        centerScreenX
+      )*.12;
+
+
+    worldRotateX=
+      startRotateX+
+      (
+        midY-
+        centerScreenY
+      )*.12;
+
+
+    worldRotateX=
+      Math.max(
+        -85,
+        Math.min(
+          85,
+          worldRotateX
+        )
+      );
+
+
+    const twist=
+      (
+        angle-
+        startAngle
+      )*
+      180/
+      Math.PI;
+
+
+    worldRotateZ=
+      startRotateZ+
+      twist;
+
+
+    updateWorld();
+
+  },
+  {
+    passive:false
+  }
+);
+
+
+world.addEventListener(
+  "touchend",
+  e=>{
+
+    if(
+      e.touches.length<2
+    ){
+
+      scheduleReset();
+
+    }
+
+  }
+);
+
+
+/* =========================================================
+   MOUSE 3D
+========================================================= */
+
+let mouseDown=false;
+
+let mouseStartX=0;
+let mouseStartY=0;
+
+let mouseStartRX=0;
+let mouseStartRY=0;
+
+
+world.addEventListener(
+  "mousedown",
+  e=>{
+
+    mouseDown=true;
+
+    mouseStartX=
+      e.clientX;
+
+    mouseStartY=
+      e.clientY;
+
+    mouseStartRX=
+      worldRotateX;
+
+    mouseStartRY=
+      worldRotateY;
+
+  }
+);
+
+
+window.addEventListener(
+  "mousemove",
+  e=>{
+
+    if(!mouseDown)
+      return;
+
+
+    worldRotateY=
+      mouseStartRY+
+      (
+        e.clientX-
+        mouseStartX
+      )*.15;
+
+
+    worldRotateX=
+      mouseStartRX+
+      (
+        e.clientY-
+        mouseStartY
+      )*.15;
+
+
+    worldRotateX=
+      Math.max(
+        -85,
+        Math.min(
+          85,
+          worldRotateX
+        )
+      );
+
+
+    updateWorld();
+
+  }
+);
+
+
+window.addEventListener(
+  "mouseup",
+  ()=>{
+
+    if(!mouseDown)
+      return;
+
+
+    mouseDown=false;
+
+    scheduleReset();
+
+  }
+);
+
+
+/* =========================================================
+   WHEEL ZOOM
+========================================================= */
+
+world.addEventListener(
+  "wheel",
+  e=>{
+
+    e.preventDefault();
+
+
+    worldScale+=
+      e.deltaY>0
+      ? -.08
+      : .08;
+
+
+    worldScale=
+      Math.max(
+        .55,
+        Math.min(
+          3,
+          worldScale
+        )
+      );
+
+
+    updateWorld();
+
+  },
+  {
+    passive:false
+  }
+);
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+const modal=
+  document.getElementById(
+    "modal"
+  );
+
+
+const modalImage=
+  document.getElementById(
+    "modalImage"
+  );
+
+
+const modalClose=
+  document.querySelector(
+    ".modal-close"
+  );
+
+
+let modalScale=1;
+
+let modalRotation=0;
+
+let modalX=0;
+let modalY=0;
+
+
+function updateModal(){
+
+  modalImage.style.transform=
+    `
+    translate(
+      ${modalX}px,
+      ${modalY}px
+    )
+    scale(${modalScale})
+    rotate(${modalRotation}deg)
+    `;
+
+}
+
+
+orbitItems.forEach(
+  item=>{
+
+    item.element
+      .querySelector("img")
+      .addEventListener(
+        "click",
+        e=>{
+
+          e.stopPropagation();
+
+
+          modalImage.src=
+            e.currentTarget.src;
+
+
+          modalScale=1;
+
+          modalRotation=0;
+
+          modalX=0;
+          modalY=0;
+
+
+          updateModal();
+
+
+          modal
+            .classList
+            .add("show");
+
+        }
+      );
+
+  }
+);
+
+
+modalClose.addEventListener(
+  "click",
+  ()=>{
+
+    modal
+      .classList
+      .remove("show");
+
+  }
+);
+
+
+modal.addEventListener(
+  "click",
+  e=>{
+
+    if(
+      e.target===modal
+    ){
+
+      modal
+        .classList
+        .remove("show");
+
+    }
+
+  }
+);
+
+
+/* =========================================================
+   MODAL MOUSE DRAG
+========================================================= */
+
+let modalDragging=false;
+
+let modalStartX=0;
+let modalStartY=0;
+
+let modalOriginX=0;
+let modalOriginY=0;
+
+
+modalImage.addEventListener(
+  "mousedown",
+  e=>{
+
+    modalDragging=true;
+
+    modalStartX=
+      e.clientX;
+
+    modalStartY=
+      e.clientY;
+
+    modalOriginX=
+      modalX;
+
+    modalOriginY=
+      modalY;
+
+    e.preventDefault();
+
+  }
+);
+
+
+window.addEventListener(
+  "mousemove",
+  e=>{
+
+    if(!modalDragging)
+      return;
+
+
+    modalX=
+      modalOriginX+
+      e.clientX-
+      modalStartX;
+
+
+    modalY=
+      modalOriginY+
+      e.clientY-
+      modalStartY;
+
+
+    updateModal();
+
+  }
+);
+
+
+window.addEventListener(
+  "mouseup",
+  ()=>{
+
+    modalDragging=false;
+
+  }
+);
+
+
+/* =========================================================
+   MODAL WHEEL
+========================================================= */
+
+modalImage.addEventListener(
+  "wheel",
+  e=>{
+
+    e.preventDefault();
+
+
+    modalScale+=
+      e.deltaY>0
+      ? -.1
+      : .1;
+
+
+    modalScale=
+      Math.max(
+        .5,
+        Math.min(
+          4,
+          modalScale
+        )
+      );
+
+
+    updateModal();
+
+  },
+  {
+    passive:false
+  }
+);
+
+
+/* =========================================================
+   START
+========================================================= */
+
+updateWorld();
+
+animateOrbits();
+
+</script>
+
+</body>
+</html>
